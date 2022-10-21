@@ -29,7 +29,7 @@ const Orders = () => {
                     ></ReviewProduct>)
                 }
                 {
-                    cart.length === 0 && <h2>There is no order. <Link to='/'>Shop More</Link></h2>
+                    cart.length === 0 && <h2>There is no order. <Link to='/shop'>Shop More</Link></h2>
                 }
             </div>
             <div className="cart-container">
