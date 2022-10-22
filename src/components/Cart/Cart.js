@@ -3,7 +3,7 @@ import './Cart.css'
 
 const Cart = (props) => {
     // console.log(cart)
-    const { cart, clearCart } = props;
+    const { cart, clearCart, children } = props;
     let total = 0;
     let shipping = 0;
     let quantity = 0;
@@ -28,6 +28,7 @@ const Cart = (props) => {
             <button onClick={clearCart}>
                 Clear Cart
             </button>
+            {children}
         </div>
     );
 };

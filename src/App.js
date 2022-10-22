@@ -8,6 +8,8 @@ import Inventory from './components/Inventory/Inventory'
 import { ProductsAndCartLoader } from './loaders/ProductsAndCartLoader';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
+import Shipping from './components/Shipping/Shipping';
+import PrivateRoutes from './routes/PrivateRoutes';
 
 
 
@@ -23,9 +25,22 @@ function App() {
           element: <Shop></Shop>
         },
         {
+          path: '/shop',
+          loader: () => fetch('products.json'),
+          element: <Shop></Shop>
+        },
+        {
           path: 'order',
           loader: ProductsAndCartLoader,
           element: <Orders></Orders>
+        },
+        {
+          path: 'inventory',
+          element: <Inventory></Inventory>
+        },
+        {
+          path: 'shipping',
+          element: <PrivateRoutes><Shipping></Shipping></PrivateRoutes>
         },
         {
           path: 'inventory',

@@ -21,10 +21,12 @@
 }
 
 .log-out-btn {
-    margin-left: 10px;
-    padding: 5px;
-    background-color: #1C2B35;
+    margin-left: 15px;
+    padding: 10px;
+    background-color: #2d23ec;
     color: white;
     border: none;
-    font-size: 17px;
+    font-size: 16px;
+    border: 1px solid #5092be;
+
 }
